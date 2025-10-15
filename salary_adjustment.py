@@ -11,7 +11,7 @@ def get_valid_float(prompt: str) -> float:
             value = float(input(prompt).strip())
             return value
         except ValueError:
-            print("❌ Please enter a valid number.")
+            print("Please enter a valid number.")
 
 def main() -> None:
     salary = get_valid_float("Enter current salary: $")
@@ -21,9 +21,9 @@ def main() -> None:
             if percent < 0:
                 raise ValueError("Percentage cannot be negative.")
             if percent > 100:
-                print("⚠️  Percentage unusually high — recheck value.")
+                print("Percentage unusually high — recheck value.")
             new_salary = salary * (1 + percent / 100)
-            print(f"\n✅ New salary after {percent:.2f}% adjustment: ${new_salary:,.2f}")
+            print(f"\n New salary after {percent:.2f}% adjustment: ${new_salary:,.2f}")
             break
         except ValueError as e:
             print(f"Error: {e}. Try again.")

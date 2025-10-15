@@ -11,13 +11,13 @@ def get_valid_number(prompt: str, number_type: type) -> float:
         try:
             return number_type(input(prompt).strip())
         except ValueError:
-            print("❌ Invalid input. Please enter a numeric value.")
+            print("Invalid input. Please enter a numeric value.")
 
 def main() -> None:
     units = get_valid_number("Enter number of units sold: ", int)
     price = get_valid_number("Enter price per unit: $", float)
     total = units * price
-    print(f"\n✅ Total revenue = {units} × ${price:.2f} = ${total:.2f}")
+    print(f"\n Total revenue = {units} × ${price:.2f} = ${total:.2f}")
 
 if __name__ == "__main__":
     main()

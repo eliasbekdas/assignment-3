@@ -14,17 +14,17 @@ def get_customer_age() -> int:
                 continue
             return age
         except ValueError:
-            print("❌ Please enter a whole number for age.")
+            print(" Please enter a whole number for age.")
         except NameError:
             # Example only (commented variable would trigger this)
-            print("⚠️  A variable was referenced before assignment.")
+            print(" A variable was referenced before assignment.")
 
 def main() -> None:
     age = get_customer_age()
     if age >= 18:
-        print("✅ Customer is eligible for age-restricted promotions.")
+        print("Customer is eligible for age-restricted promotions.")
     else:
-        print("🚫 Customer is NOT eligible (must be 18+).")
+        print("Customer is NOT eligible (must be 18+).")
 
 if __name__ == "__main__":
     main()

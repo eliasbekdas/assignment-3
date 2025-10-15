@@ -12,13 +12,13 @@ def main() -> None:
             revenue = float(input("Enter revenue: $").strip())
             ratio = (profit / revenue) * 100
         except ValueError:
-            print("❌ Invalid number. Try again.\n")
+            print("Invalid number. Try again.\n")
             pass
         except ZeroDivisionError:
-            print("⚠️  Revenue cannot be zero. Try again.\n")
+            print("Revenue cannot be zero. Try again.\n")
             pass
         else:
-            print(f"\n✅ Profit margin: {ratio:.2f}%")
+            print(f"\n Profit margin: {ratio:.2f}%")
             break
 
 if __name__ == "__main__":
